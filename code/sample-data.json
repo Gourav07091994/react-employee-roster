@@ -1,0 +1,153 @@
+{
+    "companyInfo": {
+      "companyName": "Goldner - Bartoletti",
+      "companyMotto": "proactive e-enable infomediaries",
+      "companyEst": "2023-03-14T01:26:58.849Z"
+    },
+    "employees": [ 
+      {
+        "id": "2fdc8017-41a5-4d2f-ada8-dee572d8ffea",
+        "avatar": "/user.png",
+        "firstName": "Ruby",
+        "lastName": "Swift",
+        "jobTitle": "Chief Optimization Developer",
+        "contactNo": "0439 221 608",
+        "address": "Annabelle Circle Alicebury, Queensland",
+        "age": 59,
+        "bio": "Adipisci pariatur sint ipsa culpa. Saepe dolorem tempora autem voluptas. In saepe magni dolor quis officiis ut iste. Cupiditate dignissimos blanditiis esse praesentium consequuntur velit unde quidem. Pariatur maxime maxime.",
+        "dateJoined": "2021-11-26T03:11:49.776Z"
+      },
+      {
+        "id": "9ead23a4-6e90-4e3a-8df9-e417caf5c434",
+        "avatar": "/user.png",
+        "firstName": "Amy",
+        "lastName": "Ferry",
+        "jobTitle": "Investor Marketing Director",
+        "contactNo": "0451 146 561",
+        "address": "Jordan Avenue Jaydenview, New South Wales",
+        "age": 22,
+        "bio": "Unde quo id consectetur aspernatur commodi qui ut aliquam sunt. Omnis delectus reiciendis omnis fugiat doloremque similique dolorem quisquam ut. Sit aperiam aliquid beatae est minus id. Placeat voluptatem nulla ea quidem occaecati dignissimos. Delectus omnis ea ut alias culpa et consectetur.",
+        "dateJoined": "2021-09-27T19:38:47.314Z"
+      },
+      {
+        "id": "5bd07383-4536-4dae-a2cc-812999ace74a",
+        "avatar": "/user.png",
+        "firstName": "Violet",
+        "lastName": "Robinson",
+        "jobTitle": "Forward Research Designer",
+        "contactNo": "0436 989 498",
+        "address": "Caleb Pass Lake Caitlinbury, Victoria",
+        "age": 35,
+        "bio": "Tempora qui explicabo quis nemo. Veritatis odit odio a odit illo. Rerum quidem fugit aut assumenda ea eum ad. Est quam quibusdam nobis.",
+        "dateJoined": "2022-05-28T01:25:25.188Z"
+      },
+      {
+        "id": "928a9d2f-bf19-4bf7-8912-5da8c723d8e8",
+        "avatar": "/user.png",
+        "firstName": "Chase",
+        "lastName": "Hyatt",
+        "jobTitle": "Product Integration Representative",
+        "contactNo": "0428 018 216",
+        "address": "Lakin Station St Port Charlie, Tasmania",
+        "age": 39,
+        "bio": "Assumenda distinctio eos reprehenderit consequatur architecto quia. Non corrupti enim sint nulla eos et similique. Ullam cupiditate et aliquam vero numquam. Amet ipsum maiores quis harum. Inventore in qui rem laborum omnis.",
+        "dateJoined": "2024-05-23T07:02:00.741Z"
+      },
+      {
+        "id": "f6fb81bd-abab-407a-b46b-a2ea7035ef90",
+        "avatar": "/user.png",
+        "firstName": "Annabelle",
+        "lastName": "O'connell",
+        "jobTitle": "International Implementation Coordinator",
+        "contactNo": "0496 376 578",
+        "address": "Ali Mall Bellaburgh, Northern Territory",
+        "age": 26,
+        "bio": "Occaecati velit inventore voluptas est ex impedit sequi aut. Consequuntur voluptatem aut asperiores. Non dolores alias.",
+        "dateJoined": "2024-03-29T16:55:05.502Z"
+      },
+      {
+        "id": "0ddc7994-9041-4141-9906-55e9255ad38e",
+        "avatar": "/user.png",
+        "firstName": "Jordan",
+        "lastName": "Williams",
+        "jobTitle": "Chief Markets Representative",
+        "contactNo": "0421 010 122",
+        "address": "Riley Court New Logan, Tasmania",
+        "age": 29,
+        "bio": "Et rerum est explicabo. Qui a porro repellat quis. Esse ut voluptates. Explicabo odit alias et id.",
+        "dateJoined": "2024-10-19T06:13:38.437Z"
+      },
+      {
+        "id": "8246f709-ba31-4bc0-ba83-047f9f37c696",
+        "avatar": "/user.png",
+        "firstName": "Abigail",
+        "lastName": "Daugherty",
+        "jobTitle": "Central Division Associate",
+        "contactNo": "0499 218 234",
+        "address": "Lucas Hill South Jade, Western Australia",
+        "age": 64,
+        "bio": "Eos tempora dolorem veritatis et. Facilis id quo sint delectus veritatis enim cum qui. Sint necessitatibus sunt. Debitis eligendi velit quo qui.",
+        "dateJoined": "2022-09-02T04:14:46.726Z"
+      },
+      {
+        "id": "25e9d9a0-70be-415a-8598-c30cb2eaa677",
+        "avatar": "/user.png",
+        "firstName": "Angelina",
+        "lastName": "Jacobs",
+        "jobTitle": "Senior Brand Planner",
+        "contactNo": "0422 537 694",
+        "address": "Clarke Court Boyerfort, South Australia",
+        "age": 27,
+        "bio": "Molestias rerum aperiam ut quam quia incidunt praesentium consequuntur voluptatibus. Quam illo similique dolore beatae aut. Est at labore esse beatae. Reprehenderit dicta aspernatur pariatur magni. Quaerat vero aut veniam vel.",
+        "dateJoined": "2019-02-25T04:25:32.890Z"
+      },
+      {
+        "id": "aaa98c08-e002-4eea-9f43-156ab8bac64e",
+        "avatar": "/user.png",
+        "firstName": "Connor",
+        "lastName": "Lang",
+        "jobTitle": "District Interactions Technician",
+        "contactNo": "0466 874 975",
+        "address": "Beahan Island West Violet, South Australia",
+        "age": 30,
+        "bio": "Quam aut velit est. Dolor ducimus eos in sequi et et omnis. Totam eius non corporis eveniet qui ut. Animi nihil odio magnam itaque rerum nostrum atque dolor architecto.",
+        "dateJoined": "2024-02-11T00:56:23.943Z"
+      },
+      {
+        "id": "e26861da-26fa-4aad-8d92-5cecb803d878",
+        "avatar": "/user.png",
+        "firstName": "Isaac",
+        "lastName": "Fay",
+        "jobTitle": "District Research Technician",
+        "contactNo": "0422 879 284",
+        "address": "Turcotte Loop Reesview, Northern Territory",
+        "age": 43,
+        "bio": "Illum expedita et suscipit et. Inventore quia labore nam beatae nostrum fuga sit. Ut natus dolorem aliquid odit laborum nulla. Et qui temporibus in ipsa quia non tenetur. Eius atque officia eum voluptate tempora.",
+        "dateJoined": "2021-10-31T18:52:26.595Z"
+      },
+      {
+        "id": "de570145-324b-46ca-8f70-c66ef2fe2d0d",
+        "avatar": "/user.png",
+        "firstName": "Hayley",
+        "lastName": "Kuhn",
+        "jobTitle": "Global Group Executive",
+        "contactNo": "0407 936 927",
+        "address": "Kohler Track Port Abigailside, Western Australia",
+        "age": 59,
+        "bio": "Molestiae vel quia sed iste nihil consequatur ab recusandae quas. Quisquam eveniet fuga et sunt. Cumque dolore in voluptate ut sit tempora. Consequuntur incidunt nesciunt. Deserunt repellat impedit assumenda rerum.",
+        "dateJoined": "2018-05-19T17:55:22.703Z"
+      },
+      {
+        "id": "43b8c561-1267-4766-a404-8a17fd07cd50",
+        "avatar": "/user.png",
+        "firstName": "Hunter",
+        "lastName": "Murray",
+        "jobTitle": "Principal Usability Producer",
+        "contactNo": "0466 228 330",
+        "address": "Lee Parade East Mikayla, South Australia",
+        "age": 57,
+        "bio": "Corporis vel et dignissimos modi aliquam sint voluptas iure ut. Dolorem at nostrum sit sunt itaque doloremque. Et velit rerum.",
+        "dateJoined": "2023-04-25T02:21:42.497Z"
+      }
+    ]
+  }
