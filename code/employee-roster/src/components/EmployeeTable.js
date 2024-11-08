@@ -1,4 +1,3 @@
-// /code/employee-roster/src/components/EmployeeTable.js
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchEmployees } from '../redux/actions';
@@ -9,25 +8,67 @@ const EmployeeTable = () => {
     const employees = useSelector((state) => state.employees);
     const [filteredEmployees, setFilteredEmployees] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc' });
     const [currentPage, setCurrentPage] = useState(1);
     const employeesPerPage = 10;
     const [selectedEmployee, setSelectedEmployee] = useState(null);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         dispatch(fetchEmployees());
     }, [dispatch]);
 
     useEffect(() => {
-        setFilteredEmployees(
-            employees.filter(employee =>
-                employee.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                employee.lastName.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-        );
+        try {
+            setError('');
+            const searchValue = searchTerm.toLowerCase();
+            const filtered = employees.filter(employee => {
+                return (
+                    employee.firstName.toLowerCase().includes(searchValue) ||
+                    employee.lastName.toLowerCase().includes(searchValue) ||
+                    employee.id.toString().includes(searchValue) ||
+                    employee.contactNo.toString().includes(searchValue) ||
+                    employee.address.toLowerCase().includes(searchValue)
+                );
+            });
+
+            if (filtered.length === 0) {
+                setError('No employees found for the search criteria.');
+            }
+            setFilteredEmployees(filtered);
+        } catch (err) {
+            setError('An error occurred during the search.');
+        }
     }, [employees, searchTerm]);
 
     const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
     const handleSearchChange = (e) => setSearchTerm(e.target.value);
+
+    const handleSort = (key) => {
+        let direction = 'asc';
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({ key, direction });
+    };
+
+    const sortedEmployees = [...filteredEmployees].sort((a, b) => {
+        if (!sortConfig.key) return 0;
+        const order = sortConfig.direction === 'asc' ? 1 : -1;
+        
+        if (typeof a[sortConfig.key] === 'string') {
+            return a[sortConfig.key].localeCompare(b[sortConfig.key]) * order;
+        } else {
+            return (a[sortConfig.key] - b[sortConfig.key]) * order;
+        }
+    });
+
+    const renderSortArrows = (key) => (
+        <span className="sort-arrows">
+            <span className={`arrow ${sortConfig.key === key && sortConfig.direction === 'asc' ? 'active' : ''}`}>&#9650;</span>
+            <span className={`arrow ${sortConfig.key === key && sortConfig.direction === 'desc' ? 'active' : ''}`}>&#9660;</span>
+        </span>
+    );
 
     const handleRowClick = (employee) => setSelectedEmployee(employee);
     const closeModal = () => setSelectedEmployee(null);
@@ -44,13 +85,16 @@ const EmployeeTable = () => {
                 <div className="search-bar">
                     <input
                         type="text"
-                        placeholder="Search by name"
+                        placeholder="Search across all fields"
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
                     <button>Search</button>
                 </div>
             </div>
+
+            {/* Error Message */}
+            {error && <p className="error-message">{error}</p>}
 
             {/* Record Count */}
             <div className="record-count">
@@ -61,14 +105,22 @@ const EmployeeTable = () => {
             <table className="employee-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Contact No</th>
-                        <th>Address</th>
+                        <th onClick={() => handleSort('id')}>
+                            <span className="header-with-arrows">ID {renderSortArrows('id')}</span>
+                        </th>
+                        <th onClick={() => handleSort('firstName')}>
+                            <span className="header-with-arrows">Name {renderSortArrows('firstName')}</span>
+                        </th>
+                        <th onClick={() => handleSort('contactNo')}>
+                            <span className="header-with-arrows">Contact No {renderSortArrows('contactNo')}</span>
+                        </th>
+                        <th onClick={() => handleSort('address')}>
+                            <span className="header-with-arrows">Address {renderSortArrows('address')}</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredEmployees.slice((currentPage - 1) * employeesPerPage, currentPage * employeesPerPage).map(employee => (
+                    {sortedEmployees.slice((currentPage - 1) * employeesPerPage, currentPage * employeesPerPage).map(employee => (
                         <tr key={employee.id} onClick={() => handleRowClick(employee)}>
                             <td>{employee.id}</td>
                             <td>

@@ -187,3 +187,26 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+/* CSS for the inline sorting arrows */
+.header-with-arrows {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort-arrows {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.arrow {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.arrow.active {
+  opacity: 1;
+  color: #000; /* Highlight active arrow */
+}
